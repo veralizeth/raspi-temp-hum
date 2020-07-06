@@ -1,4 +1,3 @@
-
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import weather_station_reporter
 import logging

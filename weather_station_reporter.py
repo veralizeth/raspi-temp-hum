@@ -25,5 +25,4 @@ class WeatherData:
     def to_json(self):
         return '{{"temperature": {temperature}, "humidity": {humidity}, "timestamp":{date}}}'.format( \
             temperature = self.temperature, humidity = self.humidity, date = self.date)
-        
 
