@@ -2,7 +2,7 @@
 
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 
-import temp_hum
+import weather_station_reporter
 import logging
 import time
 import json
@@ -79,7 +79,7 @@ deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 # Read data from moisture sensor and update shadow
 while True:
 
-    ws = temp_hum.WeatherStation()
+    ws = weather_station_reporter.WeatherStation()
     w_data = ws.get_weather_data()
 
     # Create message payload
