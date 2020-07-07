@@ -1,8 +1,6 @@
 import Adafruit_DHT
 import time
 import datetime
-
-
 class WeatherStation:
     def __init__(self):
         self.DHT_SENSOR = Adafruit_DHT.DHT22

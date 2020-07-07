@@ -35,4 +35,4 @@ while True:
         myAWSIoTMQTTClient.publish("raspi/temphum", w_data.to_json(), 0)
         sleep(4)
     else:
-      print("unable to connect")
+        print("unable to connect")
