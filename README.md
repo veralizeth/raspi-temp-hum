@@ -9,8 +9,9 @@ Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
     * [DHT22 sensor Configurations](#DHT22-sensor-Configurations)
     * [AWS IoT Configurations](#AWS-IoT-Configurations)
     * [AWS Pyhton SDK IoT Configurations](#AWS-Pyhton-SDK-IoT-Configurations)
-    
-* [Data-visualization-AWS-console](#)
+* [AWS Rules](#)
+* [AWS SQS](#)
+* [Data-visualization-SQS AWS-console](#)
 
 ## Introduction and Technologies
 **The problem**: 
@@ -102,7 +103,23 @@ pip install AWSIoTPythonSDK
 
 Use AWS SDK [Github repository](https://github.com/aws/aws-iot-device-sdk-python-v2)
 
-To connect your rasperryPI with IOT use the file in this repo called:[iot_thing_shadow_reported.py](https://github.com/veralizeth/raspi-temp-hum/blob/master/iot_thing_shadow_reported.py) don’t forget to add your certificates.
+To connect your rasperryPI with IOT use the file in this repo called: [iot_thing_shadow_reported.py](https://github.com/veralizeth/raspi-temp-hum/blob/master/iot_thing_shadow_reported.py) don’t forget to add your certificates.
+
+
+## AWS Rules
+
+### Use case
+
+Rules give your devices the ability to interact with AWS services. Rules are analyzed and actions are performed based on the MQTT topic stream. You can use rules to support tasks like write data received from a device to an Amazon DynamoDB database,  Send a push notification to all users using Amazon SNS and many more. 
+
+For the purpose of this project we are going to use AWS Rules to publish data to an Amazon SQS queue.
+
+### To create a new rule follow this tutorial:
+
+[Creating an AWS IoT rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-create-rule.html)
+
+
+
 
 ## Data visualization AWS console
 
