@@ -1,5 +1,6 @@
 # Catapult Raspberry PI Environment Monitoring
 ### Capstone Project - Vera Rodriguez - Ada Developers' Academy - Raspberry PI4 Repo
+
 Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
 
 ## Table of Contents
