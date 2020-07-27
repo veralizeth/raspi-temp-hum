@@ -1,6 +1,6 @@
 # Catapult Raspberry PI Environment Monitoring
-#### Capstone Project - Vera Rodriguez - Ada Developers' Academy
-Raspberry Pi temperature and Humidity reporter through AWS IOT Things system.
+### Capstone Project - Vera Rodriguez - Ada Developers' Academy - Raspberry PI4 Repo
+Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
 
 ## Table of Contents
 
@@ -25,6 +25,12 @@ Send information to the cloud
   * AWS IOT (Internet of thins) Send data from the sensor to the cloud
     * Create a AWS Thing [Steps to create the certificates and the thing](https://docs.aws.amazon.com/iot/latest/developerguide/iot-moisture-create-thing.html)
     * Built with Python 3.7 AWS SDK [Github repository](https://github.com/aws/aws-iot-device-sdk-python-v2)
+
+## DHT22 Sensor
+
+DHT22 — This temperature and humidity sensor has temperature accuracy of +/- 0.5 C and a humidity range from 0 to 100 percent. It is simple to wire up to the Raspberry Pi and doesn’t require any pull up resistors.
+
+![GitHub Logo](https://miro.medium.com/max/1400/0*cn8OB9B3QjUpOBix)
 
 ## AWS IOT Internet of Things
 
