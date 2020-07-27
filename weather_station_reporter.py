@@ -8,7 +8,7 @@ class WeatherStation:
         
     def get_weather_data(self):
         humidity, temperature = Adafruit_DHT.read(self.DHT_SENSOR, self.DHT_PIN)
-        date = datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+        date = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S')
         if humidity is not None and temperature is not None:
             return WeatherData(temperature, humidity, date)
         else:

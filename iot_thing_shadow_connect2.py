@@ -22,7 +22,7 @@ import json
 # Function called when a shadow is updated
 
 
-def customShadowCallback_Update(payload, responseStatus, token):
+def customShadowCallback_Delta(payload, responseStatus, token):
 
     # Display status and data from update request
     if responseStatus == "timeout":
@@ -30,17 +30,8 @@ def customShadowCallback_Update(payload, responseStatus, token):
 
     if responseStatus == "accepted":
         payloadDict = json.loads(payload)
-        isOn = payloadDict["state"]["reported"]["isOn"]
         deltaMessage = json.dumps(payloadDict["state"])
-        print(isOn)
-        
-        if isOn == "true":
-            print("Turn on LED")
-        else:
-            print("Turn off LED")
-            # GPIO.output(LEDPIN, GPIO.LOW)  # Turn on
-        #print("Request to update the reported state...")
-        newPayload = '{"state":{"reported":' + deltaMessage + '}}'
+        print(deltaMessage)
 
         print("~~~~~~~~~~~~~~~~~~~~~~~")
         print("Update request with token: " + token + " accepted!")
@@ -96,18 +87,23 @@ deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(
 # Delete current shadow JSON doc
 deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 
+# Listen on deltas
+print(deviceShadowHandler.shadowRegisterDeltaCallback)
+print(customShadowCallback_Delta)
+deviceShadowHandler.shadowRegisterDeltaCallback(customShadowCallback_Delta)
+
 # Read data from moisture sensor and update shadow
 while True:
 
-    ws = weather_station_reporter.WeatherStation()
-    w_data = ws.get_weather_data()
+    # ws = weather_station_reporter.WeatherStation()
+    # w_data = ws.get_weather_data()
 
-    # Create message payload
-    if w_data is not None:
-        payload = {"state": {"reported": {
-            "temperature": w_data.temperature, "humidity": w_data.humidity, "timestamp": w_data.date, "isOn": True}}}
+    # # Create message payload
+    # if w_data is not None:
+    #     payload = {"state": {"reported": {
+    #         "temperature": w_data.temperature, "humidity": w_data.humidity, "timestamp": w_data.date, "isOn": True}}}
 
-    # Update shadow
-    deviceShadowHandler.shadowUpdate(json.dumps(
-        payload), customShadowCallback_Update, 5)
+    # # Update shadow
+    # deviceShadowHandler.shadowUpdate(json.dumps(
+    #     payload), customShadowCallback_Update, 5)
     time.sleep(1)

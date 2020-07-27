@@ -5,7 +5,7 @@ import json
 
 clientId = "mypythoncodetempo"
 thingName = "Tempo"
-isOn=False
+isOn=True
 myAWSIoTMQTTShadowClient = AWSIoTMQTTShadowClient(clientId)
 myAWSIoTMQTTShadowClient.configureEndpoint(
     "a2dixiflmrhbet-ats.iot.us-east-2.amazonaws.com", 8883)
@@ -32,4 +32,4 @@ while True:  # Run forever
       newPayload = '{"state":{"desired":{"isOn":"false"}}}'
       deviceShadowHandler.shadowUpdate(newPayload, None, 5)
       isOn = False
-  time.sleep(0.2)  # Sleep for 0.2 second
+  time.sleep(3)  # Sleep for 0.2 second
