@@ -43,7 +43,7 @@ DHT22 — This temperature and humidity sensor has temperature accuracy of +/- 0
 
 Example bellow:
 
-![GitHub Logo](/DTH22raspisensor.jpeg)
+![DHT22 sensor](/DTH22raspisensor.jpeg)
 
 ## AWS IOT Internet of Things
 
