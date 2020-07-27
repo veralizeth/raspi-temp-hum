@@ -30,7 +30,7 @@ Send information to the cloud
 
 DHT22 — This temperature and humidity sensor has temperature accuracy of +/- 0.5 C and a humidity range from 0 to 100 percent. It is simple to wire up to the Raspberry Pi and doesn’t require any pull up resistors.
 
-![GitHub Logo](https://miro.medium.com/max/1400/0*cn8OB9B3QjUpOBix)
+![GitHub Logo](/DTH22raspisensor.jpeg)
 
 ## AWS IOT Internet of Things
 
