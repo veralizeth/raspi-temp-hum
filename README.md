@@ -116,7 +116,7 @@ For the purpose of this project we are going to use AWS Rules to publish data to
 
 #### To create a new rule follow this tutorial: [Creating an AWS IoT rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-create-rule.html)
 
-The rule should look like this:
+The rule should looks like this:
 ![iot Rule](/iotRule.png)
 
 ## AWS SQS
@@ -127,6 +127,8 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 
 #### To create an SQS queue follow this tutorial: [How to Create an SQS Queue Using the AWS Console](https://www.dummies.com/programming/cloud-computing/amazon-web-services/create-sqs-queue-using-aws-console/)
 
+The body of the message should looks like this:
+![iot Rule](/sqsMessage.png)
 
 ## Data visualization AWS console
 
