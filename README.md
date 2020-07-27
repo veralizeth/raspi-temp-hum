@@ -1,7 +1,13 @@
 # Catapult Raspberry PI Environment Monitoring
-### Capstone Project - Vera Rodriguez - Ada Developers' Academy - Raspberry PI4 Repo
+### Capstone Project - Vera Rodriguez - Ada Developers' Academy
 
-Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
+To execute this project there are three repositories: 
+
+1. raspi-temp-hum -> Hardware and connections to AWS Iot and SQS. 
+1. raspi-temp-hum-api -> [Java Spring boot API Server](https://github.com/veralizeth/raspi-temp-hum-api)
+1. raspi-temp-hum-frontEnd -> [React front-End](https://github.com/veralizeth/raspi-temp-hum-frontEnd)
+
+## 1. raspi-temp-hum -> Hardware and connections to AWS Iot and SQS. 
 
 ## Table of Contents
 
