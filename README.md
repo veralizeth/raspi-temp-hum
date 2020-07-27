@@ -9,8 +9,8 @@ Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
     * [DHT22 sensor Configurations](#DHT22-sensor-Configurations)
     * [AWS IoT Configurations](#AWS-IoT-Configurations)
     * [AWS Pyhton SDK IoT Configurations](#AWS-Pyhton-SDK-IoT-Configurations)
-* [AWS Rules](#)
-* [AWS SQS](#)
+* [AWS Rules](#AWS-Rules)
+* [AWS SQS](#AWS-SQS)
 * [Data-visualization-SQS AWS-console](#)
 
 ## Introduction and Technologies
@@ -114,11 +114,18 @@ Rules give your devices the ability to interact with AWS services. Rules are ana
 
 For the purpose of this project we are going to use AWS Rules to publish data to an Amazon SQS queue.
 
-### To create a new rule follow this tutorial:
+#### To create a new rule follow this tutorial: [Creating an AWS IoT rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-create-rule.html)
 
-[Creating an AWS IoT rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-create-rule.html)
+The rule should look like this:
+![iot Rule](/iotRule.png)
 
+## AWS SQS
 
+### Use case
+
+Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. Using SQS, you can send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
+
+#### To create an SQS queue follow this tutorial: [How to Create an SQS Queue Using the AWS Console](https://www.dummies.com/programming/cloud-computing/amazon-web-services/create-sqs-queue-using-aws-console/)
 
 
 ## Data visualization AWS console
