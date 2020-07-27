@@ -11,7 +11,6 @@ Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
     * [AWS Pyhton SDK IoT Configurations](#AWS-Pyhton-SDK-IoT-Configurations)
 * [AWS Rules](#AWS-Rules)
 * [AWS SQS](#AWS-SQS)
-* [Data-visualization-SQS AWS-console](#)
 
 ## Introduction and Technologies
 **The problem**: 
@@ -128,10 +127,5 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 #### To create an SQS queue follow this tutorial: [How to Create an SQS Queue Using the AWS Console](https://www.dummies.com/programming/cloud-computing/amazon-web-services/create-sqs-queue-using-aws-console/)
 
 The body of the message should looks like this:
+
 ![iot Rule](/sqsMessage.png)
-
-## Data visualization AWS console
-
-### Use case
-
-### Installation Instructions
