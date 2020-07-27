@@ -6,6 +6,10 @@ Raspberry Pi temperature and Humidity reporter through AWS IOT Thing.
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
 * [AWS IOT Internet of Things](#AWS-IOT-Internet-of-Things)
+    * [DHT22 sensor Configurations](#DHT22-sensor-Configurations)
+    * [AWS IoT Configurations](#AWS-IoT-Configurations)
+    * [AWS Pyhton SDK IoT Configurations](#AWS-Pyhton-SDK-IoT-Configurations)
+    
 * [Data-visualization-AWS-console](#)
 
 ## Introduction and Technologies
@@ -47,7 +51,7 @@ AWS IoT makes it easy for you to build scalable IoT applications that collect, p
 
 ### Installation Instructions
 
-#### DHT22 Configurations: 
+#### DHT22 sensor Configurations: 
 
 The DHT22 will have three pins — 5V, Gnd, and data. There should be a pin label for power on the DHT22 (e.g. ‘+’ or ‘5V’). Connect this to pin 2 (the top right pin, 5V) of the Pi. The Gnd pin will be labeled ‘-’ or ‘Gnd’ or something equivalent. Connect this to pin 6 Gnd (two pins below the 5V pin) on the Pi. The remaining pin on the DHT22 is the data pin and will be labeled ‘out’ or ‘s’ or ‘data’. Connect this to one of the GPIO pins on the Pi such as GPIO4 (pin 7). Once this is wired, power on your Pi.
 
@@ -96,11 +100,9 @@ Install from pip
 pip install AWSIoTPythonSDK
 ```
 
-Use AWS SDK [Github repository](https://github.com/aws/aws-iot-device-sdk-python-v2) 
-To connect your rasperryPI with IOT use the file in this repo called: [weather_station_reporter.py](https://github.com/veralizeth/raspi-temp-
+Use AWS SDK [Github repository](https://github.com/aws/aws-iot-device-sdk-python-v2)
 
-
-
+To connect your rasperryPI with IOT use the file in this repo called:[iot_thing_shadow_reported.py](https://github.com/veralizeth/raspi-temp-hum/blob/master/iot_thing_shadow_reported.py) don’t forget to add your certificates.
 
 ## Data visualization AWS console
 
